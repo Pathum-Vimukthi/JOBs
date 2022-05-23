@@ -71,7 +71,7 @@
 			<a href="Personal and Community Development Jobs .html"><button id="btndrop">Personal and Community development</button></a><br>
 			<a href="Text tile & garment.html"><button id="btndrop">Testile and garment</button></a><br>
 			<a href="agriculture.html"><button id="btndrop">Agriculture</button></a><br>
-			<a href="Hospitality and tourism.html"><button id="btndrop">Hotel and tourism cook</button></a><br>
+			<a href="Hospitality and tourism.html"><button id="btndrop">Hospitality and tourism</button></a><br>
 			<a href="Security.html"><button id="btndrop">Security</button></a><br>
 			<a href="Business.html"><button id="btndrop">Business</button><a/><br>
 			<a href="Building construction.html"><button id="btndrop">Building Construction</button></a><br>
@@ -100,6 +100,18 @@
 				else if(pass2 == ""){
 					alert("Fill the Confirm Password Field!");
 				}
+				else{
+					swal({
+						icon: "success",
+						title: "SUCCESS",
+						text: "Congratulations your account has been successfully created.",
+						type: "success"
+					}).then(function() 
+					{
+						window.location="index.html";
+					});
+					return false;
+				}
 			}
 			
 			function passwordVal(){
@@ -113,18 +125,7 @@
 					document.myform.pass2.select();
 					return false;
 				}
-				else{
-					swal({
-						icon: "success",
-						title: "SUCCESS",
-						text: "Congratulations your account has been successfully created.",
-						type: "success"
-					}).then(function() 
-					{
-						window.location="index.html";
-					});
-					return false;
-				}
+				
 			}
 			
 			function checkLetterf(){
